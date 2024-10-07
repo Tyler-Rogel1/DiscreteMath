@@ -36,7 +36,26 @@ def print_all_perms(n):
     print(''.join(map(str, a)))
     while a != reverse:
         find_next_perm(a)
-        print(''.join(map(str, a)))
+        # print(''.join(map(str, a)))
+
+def return_all_perms(n):
+    a = []
+    for i in range(n):
+        a.append(i)
+    reverse = a[::-1]
+    all_perms = []
+    all_perms.append(a)
+    # print(''.join(map(str, a)))
+    # print(all_perms)
+    while a != reverse:
+        # print("pre findnext: ", all_perms)
+        copy = a.copy()
+        a = find_next_perm(copy)
+        # print("pre appednd: ", all_perms)
+        all_perms.append(a)
+        # print(''.join(map(str, a)))
+        # print(all_perms)
+    return all_perms
     
 
 def main():
