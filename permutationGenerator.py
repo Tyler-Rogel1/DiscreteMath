@@ -36,7 +36,7 @@ def print_all_perms(n):
     print(''.join(map(str, a)))
     while a != reverse:
         find_next_perm(a)
-        # print(''.join(map(str, a)))
+        print(''.join(map(str, a)))
 
 def return_all_perms(n):
     a = []
@@ -59,7 +59,7 @@ def return_all_perms(n):
     
 
 def main():
-    n = int(input("enter an interger from 1 to 9: "))
+    n = int(input("enter an integer from 1 to 9: "))
     print_all_perms(n)
 
 if __name__ == '__main__':
