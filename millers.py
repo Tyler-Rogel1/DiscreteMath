@@ -13,6 +13,7 @@ def is_prime(n, k=10):
     # Write n-1 as 2^s * e with e odd
     s = 0
     e = n - 1
+    # take out as many 2s as possible
     while e % 2 == 0:
         e //= 2
         s += 1
@@ -20,7 +21,7 @@ def is_prime(n, k=10):
 
     # Test k times
     for _ in range(k):
-        # Choose a random integer in [2, n - 2]
+        # pick random base
         b = random.randint(2, n - 2)
         remainder = pow(b, e, n)
         
